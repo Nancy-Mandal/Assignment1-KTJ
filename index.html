@@ -1,0 +1,567 @@
+<!doctype html>
+<html>
+<head>
+    <title>Assignment1</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+
+
+    body {
+        font-family: Arial, Helmet, Freesans, sans-serif;
+        margin:0;
+        line-height:16px;
+
+    }
+
+    #container {
+        border: 2px solid grey;
+        height: 98vh;
+        display: flex;
+        /*flex-direction: column-reverse;
+    /* justify-content: flex-end; */
+    /* justify-content: flex-start; */
+        justify-content: center;
+       /* align-items: center;*/
+   /* align-items: flex-end;
+    align-items: flex-start; */
+       /* flex-wrap: wrap;*/
+    /* flex-flow: column wrap; */
+
+    }
+
+    #top-bar {
+        width:100%;
+        height:67px;
+        background-color:#7A0000;
+        margin:0;
+        position:fixed;
+
+    }
+
+    .fixed-width {
+        width:1150px;
+        margin: 0 auto;
+
+    }
+
+    #restaurant {
+        padding-right:10px;  
+        float:left;
+        border-right:1px solid #990000;
+        height:46px;
+
+    }
+
+    #restaurant img:hover {
+        margin:0 10px 0 10px;
+
+    }
+
+    #top-menu ul {
+        float: center;
+        padding:0;
+        margin:0;
+        height:46px;
+
+    }
+
+    #top-menu li {
+        float:left;
+        color:white;
+        border-left:1px solid #990000;
+        height: 33px;
+        list-style:none;
+        padding: 13px 20px 2px 20px;
+
+    }
+
+    #top-menu li:hover {
+        height:28px;
+
+    }
+
+    #introSection:hover {
+        border-bottom:5px solid #bb72af;
+
+     }
+
+    #specialitiesSection:hover {
+        border-bottom:5px solid #ffe711;
+
+    }
+
+    #OurRecommendationsSection:hover {
+        border-bottom:5px solid #77cdff;
+
+    }
+
+    #ReviewsSection:hover {
+        border-bottom:5px solid #ed3482;
+
+    } 
+
+    .footer:hover {
+        border-bottom:5px solid wheat;
+
+    }
+
+    .title {
+        background-color: rgb(147, 175, 167);
+        border: 0.5px solid rgb(131, 161, 163);
+        margin: 0;
+        width: 1150px;
+        height: 98vh;
+
+    }
+
+    .cover{
+        background-color: rgb(147, 175, 167);
+        border: 0.5px solid rgb(131, 161, 163);
+        margin: 0;
+        width: 1150px;
+        height: 98vh;
+
+    }
+
+    #specialities{
+        background-color: rgb(105, 66, 14);
+        border: 0.5px solid rgb(102, 80, 7);
+        margin: 0;
+        width: 1500px;
+        height: 200vh;
+
+    }
+
+    .card1{
+        background-color: rgb(88, 130, 185);
+        border: 2px solid rgb(4, 50, 71);
+        margin: 12px;
+        width: 180px;
+        height: 600px;
+        align-content: space-around;
+    }
+
+    .card2{
+        background-color: rgb(88, 130, 185);
+        border: 2px solid rgb(4, 50, 71);
+        margin: 12px;
+        width: 180px;
+        height: 600px;
+        align-content: space-around;
+    }
+
+    .card1 img:hover {
+      /*  margin: 10px 0 0 10px;*/
+        font-size: 100px;
+    }
+
+
+    .scontainer{
+        border: 2px solid rgb(109, 230, 119);
+        height: fit-content;
+        width: 1300px;
+        display: flex;
+        /*flex-direction: column;*/
+       /* align-items: center;
+        flex-wrap: wrap;*/
+        align-content: space-around;
+    }
+
+    .color{
+        text-decoration-color: #7cd890;
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: right;
+        font-size: large;
+    }
+
+    #rcontainer{
+        border: 2px solid rgb(143, 32, 32);
+        height: 200vh;
+        display: flex;
+      /*  justify-content: center;*/
+    }
+
+    .recomm {
+        background-color: rgb(39, 172, 134);
+        border: 0.5px solid rgb(65, 155, 161);
+        margin: 0;
+        width: 1500px;
+        height: 200vh;
+
+    }
+
+    .recomm ul {
+        float:left;
+        padding:0;
+        margin:0;
+        height:46px;
+
+    }
+
+    .recomm li {
+        float:left;
+        color:white;
+        border-left:5px solid #990000;
+        height:33px;
+        list-style:none;
+        padding: 13px 20px 0 20px;
+
+    }
+
+    a:visited{
+        color: white;
+    }
+
+    #vcontainer{
+        border: 2px solid rgb(143, 32, 32);
+        height: 200vh;
+        display: flex;
+        justify-content: center;
+    }
+
+   /* .rev{
+        background-color: rgb(63, 39, 172);
+        border: 0.5px solid rgb(10, 68, 20);
+        margin: 0;
+        width: 1500px;
+        height: 200vh; 
+    }*/
+
+    .rev1 {
+        background-color: rgb(57, 40, 136);
+        border: 0.5px solid rgb(3, 41, 44);
+        margin: 0;
+        width: 1150px;
+        height: 200vh;
+
+    }
+
+    .rev2 {
+        background-color:  rgb(57, 40, 136);
+        border: 0.5px solid rgb(3, 41, 44);
+        margin: 0;
+        width: 1150px;
+        height: 200vh;
+
+    }
+
+    .carda{
+        background-color: rgb(88, 130, 185);
+        border: 2px solid rgb(4, 50, 71);
+        margin: 16px;
+        width: 560px;
+        height: 230px;
+        align-content: space-around;
+    }
+
+    .cardb{
+        background-color: rgb(88, 130, 185);
+        border: 2px solid rgb(4, 50, 71);
+        margin: 16px;
+        width: 560px;
+        height: 230px;
+        align-content: space-around;
+    }
+
+    .carda img:hover {
+      /*  margin: 10px 0 0 10px;*/
+        font-size: 100px;
+    }
+
+
+    .econtainer{
+        border: 2px solid rgb(109, 230, 119);
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+       /* align-items: center;
+        flex-wrap: wrap;*/
+        align-content: space-around;
+    }
+
+    #fcontainer{
+        border: 2px solid rgb(32, 4, 65);
+        height: 50vh;
+        width: 1500px;
+        display: flex;
+        flex-direction: column;
+      /* align-items: center;
+        flex-wrap: wrap;*/
+      /*  align-content: space-around;*/
+    }
+
+    .footerbox {
+        background-color: rgb(211, 151, 184);
+        border: 0.5px solid rgb(14, 5, 48);
+        margin: 0;
+        width: 1500px;
+        height: 50vh;
+
+    }
+
+    .colour{
+        text-decoration-color: #7cd890;
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
+        font-size: large;
+    }
+
+    .coloring{
+        text-decoration-color: #7cd890;
+        font-weight: bold;
+        text-decoration: underline;
+        font-size: large;
+    }
+
+    #fcontainer ul {
+        float: center;
+        padding:0;
+        margin:0;
+        height:46px;
+
+    }
+
+    #fcontainer li {
+        float: left;
+        list-style: none;
+        padding: 10px 10px 10px 10px;
+
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+        <div id="top-bar">
+            <div class="fixed-width">
+                
+                
+                <div id="top-menu">
+                    <ul>
+                        
+                        <li id="restaurant"><img src="logo.JPG" height="30px" width="60px"/></li>
+                        <li id="introSection"><a href="#container">Introduction</a></li>
+                        <li id="specialitiesSection"><a href="#specialities">Specialities</a></li>
+                        <li id="OurRecommendationsSection"><a href="#rcontainer">Our Recommendations</a></li>
+                        <li id="ReviewsSection"><a href="#vcontainer">Reviews</a></li>
+                        <li class="footer"><a href="#fcontainer">Contact Us</a></li>
+            
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="container" class="fixed-width">
+
+            <div class="title">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <img src="logo.JPG" height="50px" width="100px"/>
+                <p>Pratibha's Traditional Taste</p>
+                <p><h1>Reviving mom's magical foods</h1></p>
+            </div>
+            <div class="cover">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <p><h1>Do never compromise with hygiene</h1></p>
+                <p>Don't let quality of your eating habits down</p>
+            </div>
+      
+        </div>
+
+        <div id="specialities" class="fixed-width">
+            <br />
+            <br />
+            <br />
+            <br />
+            <P><h3>Here is our specialities. Do check it out.</h3></P>
+            <p><h2>Special people should eat special food.</h2></p>
+
+            <div class="scontainer">
+
+                <div class="card1">
+                    <p><img src="https://lh3.googleusercontent.com/proxy/2mkv9nCzG4y2k5GstV0nPlof3SXCsX9hyijh8EkwD7FtXDJMRQYeiIyw3yUdkWUe53atUh7upkvoE-0HsRm41qn5pABEflz3cIdiUADSzP0Skr7a5JbkalMz1pcvtD1hxDuXmRG8-6agVjl8BPp04WuU5F8ePSh-PSBgag" height= "50px" width= "60px" /></p>
+                    <p>
+                        Dal puri
+                        <img src="https://icon2.cleanpng.com/20180601/ae/kisspng-vegetarian-cuisine-biryani-indian-cuisine-vegetabl-vegetarian-5b11c2357677b7.0724399215278904854853.jpg" height="12px" width="12px" />
+                    </p>
+                    <br />
+
+                    <p>Rs. 500/plate</p>
+                    <br />
+                    <p>this is very simple food but you will find the natural taste and healthy view</p>
+                    <br />
+                    <br />
+                    <br />
+                    <p>Discount on this item for the next week---</p>
+                    <p>1 plate free on 3 plates purchasal</p>
+                    <br />
+                    <br />
+                    <p class="color">Add+</p>
+
+                </div>
+
+                <div class="card2">
+                    <p><img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/09/Chicken-Curry-Thumbnail.jpg" height="50px" width="60px" /></p>
+                    <p>
+                        Special Chicken curry
+                        <img src="https://image.shutterstock.com/image-vector/non-veg-illustration-vector-icon-260nw-1762664813.jpg" height="12px" width="12px" />
+                    </p>
+
+                </div>
+
+                <div class="card1">
+
+                </div>
+
+                <div class="card2">
+
+                </div>
+
+                <div class="card1">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="rcontainer" class="recomm fixed-width">
+            <br />
+            <br />
+            <br />
+            <ul>
+                <li> <input type="text" placeholder="Search" /></li>
+            </ul>
+           
+        </div>
+
+        
+            <div id="vcontainer" class="fixed-width">
+
+                <div class="rev1">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+                
+                    <p><h1>Check reviews here</h1></p>
+
+                    <br />
+                    <br />
+
+                    <div class="econtainer">
+
+                        <div class="carda">
+                           <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg/220px-Elon_Musk_Royal_Society_%28crop1%29.jpg" height="120px" width="100px" /></p>
+                           <p class="color">Elon Reeve Musk (5 stars)</p>
+                           <p>The food prepared here is very tasty and hygeinic. I found some time from my busy schedule to eat here only because of this reason</p>
+        
+                        </div>
+
+        
+                        <div class="cardb">
+                            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Bill_Gates_2017_%28cropped%29.jpg/220px-Bill_Gates_2017_%28cropped%29.jpg" height="120px" width="100px" /></p>
+                            <p class="color">William Henry Gates III (5 stars)</p>
+                            <p>I've tasted some Indian foods already long time back but this food was amazing. Great taste. Keep it up!</p>
+                         
+                        </div>
+
+                        <div class="carda">
+                            <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sundar_pichai.png/220px-Sundar_pichai.png"  height="120px" width="100px" /></p>
+                            <p class="color">Pichai Sundarajan (5 stars)</p>
+                            <p>I just recalled my mother's hand made dal puri back in India. Awesome restaurant!</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="rev2">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <p><h1>Now it's your turn to make the review.</h1></p>
+                    <br />
+                    <p><h2>Please fill this form so that we can improve better.</h2></p>
+
+                    <form action="">
+
+                        <p>Name</p>
+                        <input type="text" placeholder="type here..." />
+                        <p>Email</p>
+                        <input type="email" placeholder="type here..." />
+                
+                        <br /><br />
+                
+                        <p>Please give your valuable feedbacks.</p>
+                        <textarea>Longer text goes here</textarea>
+                
+                        <br /><br />
+                        
+                        <select>
+                
+                            <option>How many stars we deserve? Choose from drop down menu...</option>
+                            <option>1 star</option>
+                            <option>2 stars</option>
+                            <option>3 stars</option>
+                            <option>4 stars</option>
+                            <option>5 stars</option>
+                
+                        </select>
+                
+                        <br /><br />
+
+                        <br /><br />
+                       
+                        <input type="submit" value="click me!" />
+                
+                
+                    </form>
+
+                    <br />
+                    <br />
+                    <br />
+                    <p><h1>Thanks! Visit Again.</h1></p>
+                </div>
+          
+            </div>
+
+    <div id="fcontainer" class="footerbox fixed-width">
+
+        <p class="coloring"><h3><a href="#top">Back to top</a></h3></p>
+        <p class="colour">Contact Us</p>
+        <ul>
+            <li><a href=" https://www.facebook.com/nancy.mandal.94" target="_blank"><p class="colour"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT7bZ2LR_JVsIdDYAB06kFhSNcTzeo14nPIwPh1v-9FtGQyUkmyjgMwC1wc4aWBBvGA_A&usqp=CAU" height="30px" width="30px" /></p></a></li>
+            <li><a href="https://www.linkedin.com/in/nancy-mandal-9587a9209" target="_blank"><p class="colour"><img src="https://cdn.pixabay.com/photo/2017/08/22/11/56/linked-in-2668700_960_720.png" height="30px" width="30px" /></p></a></li>
+        </ul>
+
+    </div>
+        
+   
+
+</body>
+</html>
